@@ -8,7 +8,7 @@ from tornado.ioloop import IOLoop
 from setting import  appication
 
 if __name__ == "__main__":
-	appication.listen(8080)
+	appication.listen(8000)
 	tornado.ioloop.IOLoop.instance().start() 
 
 	
