@@ -32,6 +32,7 @@ appication = tornado.web.Application([
                 (r'/',IndexHandler),
                 # add some new route to router
 		(r'/login',LoginHandler),
+		(r'/isa',IsaHandler),
 #<route></route>
                 # (r'/main',MainHandler),
          ],**Settings)

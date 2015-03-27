@@ -59,3 +59,23 @@ class LoginHandler(BaseHandler):
 		# self.redirect()  # redirect or reply some content
 		self.write("hello world")
 	
+
+
+class IsaHandler(BaseHandler):
+	
+	def prepare(self):
+		super(IsaHandler,self).prepare()
+		self.template = "template/isa.html"
+
+	def get(self):
+		return self.render(self.template,post_page="/isa")
+
+	@tornado.web.asynchronous
+	def post(self):
+		# you should get some argument from follow 
+		post_args = self.get_argument("some_argument")
+		# .....
+
+		# self.redirect()  # redirect or reply some content
+		self.write("hello world")
+	
